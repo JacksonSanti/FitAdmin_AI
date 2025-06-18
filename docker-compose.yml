@@ -1,0 +1,15 @@
+services:
+  ai:
+    container_name: ai_server
+    build: .
+    ports:
+      - "5002:5002"
+    volumes:
+      - .:/AI
+    networks:
+      - fitadmin_network
+    restart: unless-stopped
+
+networks:
+  fitadmin_network:
+    external: true

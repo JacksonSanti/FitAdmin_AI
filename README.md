@@ -49,13 +49,13 @@ Este projeto tem como objetivo desenvolver um sistema completo que resolva esse 
 ## Testes
 
 1. **Após estar com o ambiente virtual aberto, basta colocar só o comando abaixo**
-   ``bash
+   ```bash
    pytest
 2. **É possivel criar modelo com base de acordo com o critério de Accuracy, ainda na raiz precisamos fazer a importação antes**
-   ``bash
+   ```bash
    from Models.Treino.model import create_model as exercise_create_model
    from Models.Serie.model import create_model as series_reps_create_model
 3. **Após isso, só bsata colocar a função de acordo com o teste de criação de modelo que quer fazer**
-   ``bash
+   ```bash
    exercise_create_model()
    series_reps_create_model()

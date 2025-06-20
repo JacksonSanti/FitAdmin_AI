@@ -1,5 +1,6 @@
 /AI
 /__pycache__
+*.pyc
 *.pkl
 !Models/Treino/treino_model.pkl
 !Models/Treino/treino_columns.pkl

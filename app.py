@@ -10,11 +10,11 @@ def create_app():
     app = Flask(__name__)
     CORS(app) 
 
-    exercise_model = joblib.load('./Models/Treino/treino_model.pkl')
-    exercise_columns = joblib.load('./Models/Treino/treino_columns.pkl')
+    exercise_model = get_exercise_model()
+    exercise_columns = get_exercise_columns()
 
-    series_reps_model = joblib.load('./Models/Serie/series_reps_model.pkl')
-    series_reps_columns = joblib.load('./Models/Serie/series_reps_columns.pkl')
+    series_reps_model = get_series_reps_model()
+    series_reps_columns = get_series_reps_columns()
 
     def get_series(exercise, plan, nivel):
         df = pd.DataFrame([{

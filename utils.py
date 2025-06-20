@@ -1,5 +1,30 @@
 import pandas as pd
 from flask import jsonify
+import joblib
+
+def get_exercise_model():
+
+    return joblib.load('./Models/Treino/treino_model.pkl')
+
+def get_exercise_columns():
+
+    return joblib.load('./Models/Treino/treino_columns.pkl')
+
+def get_exercise_csv():
+
+    return pd.read_csv('./Models/Treino/treino_csv.csv')
+
+def get_series_reps_model():
+
+    return joblib.load('./Models/Serie/series_reps_model.pkl')
+
+def get_series_reps_columns():
+
+    return joblib.load('./Models/Serie/series_reps_columns.pkl')
+
+def get_series_reps_csv():
+
+    return pd.read_csv('./Models/Serie/series_reps_csv.csv')
 
 def get_exercise(modalidade, nivel):
     modalidade_dict = {

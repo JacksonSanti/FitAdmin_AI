@@ -43,3 +43,19 @@ Este projeto tem como objetivo desenvolver um sistema completo que resolva esse 
 3. **Rodar o comando abaixo para subir este container (é necessário ter o docker instalado)**
    ```bash
    docker compose up -d
+
+---
+
+## Testes
+
+1. **Após estar com o ambiente virtual aberto, basta colocar só o comando abaixo**
+   ``bash
+   pytest
+2. **É possivel criar modelo com base de acordo com o critério de Accuracy, ainda na raiz precisamos fazer a importação antes**
+   ``bash
+   from Models.Treino.model import create_model as exercise_create_model
+   from Models.Serie.model import create_model as series_reps_create_model
+3. **Após isso, só bsata colocar a função de acordo com o teste de criação de modelo que quer fazer**
+   ``bash
+   exercise_create_model()
+   series_reps_create_model()
